@@ -2,7 +2,7 @@
 
 ## Description
 
-This repo is for reproducing the mysql2 issue in Deno, specifically focusing on database connection and query execution using the mysql2 library.
+This repo is for reproducing the [mysql2](https://github.com/sidorares/node-mysql2) issue in Deno, specifically focusing on database connection and query execution using the mysql2 library.
 
 ## Directory Structure
 
