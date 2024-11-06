@@ -73,4 +73,28 @@ This repo is for reproducing the [mysql2](https://github.com/sidorares/node-mysq
     Found 2 errors.
     ```
 
+- mysql2@3.11.4
+
+    ``` sh
+    cd mysql2-3-11-4
+    deno check main.ts
+    ```
+
+    Result:
+
+    ``` sh
+    Check file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/mysql2-3-11-4/main.ts
+    error: TS2339 [ERROR]: Property 'query' does not exist on type 'Connection'.
+            const [results, fields] = await connection.query(
+                                                       ~~~~~
+    at file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/Database.ts:14:56
+
+    TS2339 [ERROR]: Property 'execute' does not exist on type 'Connection'.
+            const [result, fields] = await connection.execute(sql, values);
+                                                      ~~~~~~~
+    at file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/Database.ts:30:55
+
+    Found 2 errors.
+    ```
+
 > The result is the same when executing the `deno compile` command.
