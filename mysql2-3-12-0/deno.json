@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "build": "deno compile --allow-net --output ../dist/mysql2-3113 main.ts"
+  },
+  "imports": {
+    "mysql2": "npm:mysql2@3.12.0"
+  }
+}
