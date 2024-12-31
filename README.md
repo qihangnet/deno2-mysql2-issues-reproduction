@@ -10,6 +10,7 @@ This repo is for reproducing the [mysql2](https://github.com/sidorares/node-mysq
 - `mysql2-3-4-1` is using the package `mysql2@3.4.1`
 - `mysql2-3-11-3` is using the package `mysql2@3.11.3`
 - `mysql2-3-11-4` is using the package `mysql2@3.11.4`
+- `mysql2-3-12-0` is using the package `mysql2@3.12.0`
 
 ## Environment Dependencies
 
@@ -85,6 +86,30 @@ This repo is for reproducing the [mysql2](https://github.com/sidorares/node-mysq
 
     ``` sh
     Check file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/mysql2-3-11-4/main.ts
+    error: TS2339 [ERROR]: Property 'query' does not exist on type 'Connection'.
+            const [results, fields] = await connection.query(
+                                                       ~~~~~
+    at file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/Database.ts:14:56
+
+    TS2339 [ERROR]: Property 'execute' does not exist on type 'Connection'.
+            const [result, fields] = await connection.execute(sql, values);
+                                                      ~~~~~~~
+    at file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/Database.ts:30:55
+
+    Found 2 errors.
+    ```
+
+- mysql2@3.12.0
+
+    ``` sh
+    cd mysql2-3-12-0
+    deno check main.ts
+    ```
+
+    Result:
+
+    ``` sh
+    Check file:///Users/yimingzhi/Projects/deno2-mysql2-issues-reproduction/mysql2-3-12-0/main.ts
     error: TS2339 [ERROR]: Property 'query' does not exist on type 'Connection'.
             const [results, fields] = await connection.query(
                                                        ~~~~~
