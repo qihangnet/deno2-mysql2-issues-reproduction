@@ -9,6 +9,7 @@ This repo is for reproducing the [mysql2](https://github.com/sidorares/node-mysq
 - `mysql2-3-4-0` is using the package `mysql2@3.4.0`
 - `mysql2-3-4-1` is using the package `mysql2@3.4.1`
 - `mysql2-3-11-3` is using the package `mysql2@3.11.3`
+- `mysql2-3-11-4` is using the package `mysql2@3.11.4`
 
 ## Environment Dependencies
 
